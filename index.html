@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_7</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+            <label for="pointure">Pointure : </label><input type="text" id="pointure" name="pointure"/><br/>
+            <label for="annee">Année de naissance : </label><input type="text" id="annee" name="annee"/><br/>
+            <button id="valider" name="valider" onClick="alert(valid())">Valider</button>
+        <!-- onClick="alert(valid())" permet d'afficher le résultat retourné
+        par la fonction en cliquant sur le button -->
+        </form>
+        <script>
+        /* Multiplier la pointure par 2
+          Ajouter 5 au résultat
+          Multiplier le tout par 50
+          Soustraire l’année de naissance
+          Ajouter au tout 1766 */
+            function valid() {
+                var size = document.getElementById("pointure").value;
+                var year = document.getElementById("annee").value;
+                var result = (((((parseInt(size) * 2) + 5) * 50) - parseInt(year)) + 1766);
+
+                return[result];
+            };
+        </script>
+    </body>
+</html>
